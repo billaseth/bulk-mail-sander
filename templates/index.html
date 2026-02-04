@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bulk Mailer | Yogesh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --bg: #0f172a; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .container { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); width: 100%; max-width: 500px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        h2 { text-align: center; color: var(--primary); margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; opacity: 0.8; }
+        input, textarea { width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white; box-sizing: border-box; outline: none; }
+        input:focus, textarea:focus { border-color: var(--primary); }
+        button { width: 100%; padding: 15px; background: var(--primary); border: none; border-radius: 8px; color: white; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        button:hover { background: #4f46e5; transform: translateY(-2px); }
+        .note { font-size: 0.8rem; text-align: center; margin-top: 15px; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🚀 AI Bulk Mailer</h2>
+        <form action="/send" method="POST">
+            <div class="form-group">
+                <label>Your Gmail ID</label>
+                <input type="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label>App Password (16 digits)</label>
+                <input type="password" name="password" placeholder="xxxx xxxx xxxx xxxx" required>
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="Enter Subject" required>
+            </div>
+            <div class="form-group">
+                <label>Client Emails (Comma or Enter separated)</label>
+                <textarea name="clients" rows="3" placeholder="email1@gmail.com&#10;email2@gmail.com" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Message Body</label>
+                <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit">Send Bulk Emails</button>
+        </form>
+        <p class="note">Developed by Yogesh Singh Rajput</p>
+    </div>
+</body>
+</html>
